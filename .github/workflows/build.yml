@@ -43,7 +43,7 @@ jobs:
         shell: powershell
         run: |
           dotnet tool install --global dotnet-coverage
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"ernestparchemross_Calculator" /o:"ernestparchemross"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"ErnestParchemRoss_Calculator" /o:"ernestparchemross"
           /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
           dotnet build --configuration Release
